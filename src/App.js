@@ -21,10 +21,9 @@ function App() {
       <header className="App-header">
         <p>I am a React Person</p>
         <ul>
-          <li>{nayoks[0]}</li>
-          <li>{nayoks[1]}</li>
-          <li>{nayoks[2]}</li>
-          <li>{nayoks[3]}</li>
+          {
+            nayoks.map(nayok => <li>{nayok}</li>)
+          }
         </ul>
         <Product product={products[0]}></Product>
         <Product product={products[1]}></Product>
