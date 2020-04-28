@@ -24,6 +24,9 @@ function App() {
           {
             nayoks.map(nayok => <li>{nayok}</li>)
           }
+          {
+            products.map(product => <li>{product.name}</li>)
+          }
         </ul>
         <Product product={products[0]}></Product>
         <Product product={products[1]}></Product>
