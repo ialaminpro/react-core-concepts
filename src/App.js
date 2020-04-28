@@ -13,7 +13,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <p>I am a React Person</p>
-        <Product name={products[0].name} price={products[0].price}></Product>
+        <Product product={products[0]}></Product>
         <Person name={nayoks[0]}></Person>
         <Person name={nayoks[1]}></Person>
       </header>
@@ -31,8 +31,8 @@ function Product(props){
   }
   return (
     <div style={productStyle}>
-      <h3>{props.name}</h3>
-      <h5>{props.price}</h5>
+      <h3>{props.product.name}</h3>
+      <h5>{props.product.price}</h5>
       <button>Buy now</button>
     </div>
   )
