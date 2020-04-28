@@ -29,7 +29,7 @@ function App() {
           }
         </ul>
         {
-          products.map(product => <Product product={product}></Product>)
+          products.map(pd => <Product product={pd}></Product>)
         }
       </header>
     </div>
