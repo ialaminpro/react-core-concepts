@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import logo from './logo.svg';
 import './App.css';
 
@@ -11,15 +11,13 @@ function App() {
   ]
   const productNames = products.map(product => product.name);
   const nayokNames = nayoks.map(nayok => nayok);
-  console.log(nayoks);
-  console.log(nayokNames);
-  console.log(products);
-  console.log(productNames);
+ 
   
   return (
     <div className="App">
       <header className="App-header">
         <p>I am a React Person</p>
+        <Counter></Counter>
         <ul>
           {
             nayoks.map(nayok => <li>{nayok}</li>)
@@ -35,6 +33,16 @@ function App() {
     </div>
   );
 }
+
+function Counter(){
+  const [count, setCount] = useState(10);
+  return(
+    <div>
+      <h1>Count: {count}</h1>
+    </div>
+  )
+}
+
 function Product(props){
   const productStyle={
     border:'1px solid gray',
