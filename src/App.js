@@ -3,24 +3,29 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
+  const nayoks = ['Anwar','Jafor Iqbal','Alamgir', 'Salman']
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <p>My First React Paragraph</p>
+        <Person name={nayoks[0]}></Person>
+        <Person name={nayoks[1]}></Person>
       </header>
     </div>
   );
+}
+function Person(props){
+  const personStyle={
+    border: '2px solid red',
+    margin: '10px'
+  }
+  console.log(props);
+  return (
+  <div style={personStyle}>
+    <h1>Name: {props.name}</h1>
+    <h3>Hero of the year</h3>
+  </div>
+  )
 }
 
 export default App;
