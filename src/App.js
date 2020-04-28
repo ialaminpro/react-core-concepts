@@ -3,17 +3,32 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
-  const nayoks = ['Anwar','Jafor Iqbal','Alamgir', 'Salman']
+  const nayoks = ['Razzak','Jafor Iqbal','Alamgir', 'Salman', 'Bappi']
   const products = [
     {name: 'Photoshop', price:'$90.99'},
     {name: 'Illustrator', price:'$60.99'},
     {name: 'PDF Reader', price:'$6.99'}
   ]
+  const productNames = products.map(product => product.name);
+  const nayokNames = nayoks.map(nayok => nayok);
+  console.log(nayoks);
+  console.log(nayokNames);
+  console.log(products);
+  console.log(productNames);
+  
   return (
     <div className="App">
       <header className="App-header">
         <p>I am a React Person</p>
+        <ul>
+          <li>{nayoks[0]}</li>
+          <li>{nayoks[1]}</li>
+          <li>{nayoks[2]}</li>
+          <li>{nayoks[3]}</li>
+        </ul>
         <Product product={products[0]}></Product>
+        <Product product={products[1]}></Product>
+        <Product product={products[2]}></Product>
         <Person name={nayoks[0]}></Person>
         <Person name={nayoks[1]}></Person>
       </header>
@@ -43,7 +58,7 @@ function Person(props){
     border: '2px solid red',
     margin: '10px'
   }
-  console.log(props);
+
   return (
   <div style={personStyle}>
     <h1>Name: {props.name}</h1>
